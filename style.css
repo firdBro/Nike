@@ -1,0 +1,372 @@
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+}
+
+.header {
+    background: url('pic/Banner.jpg') no-repeat center center/cover;
+
+    color: #fff;
+    padding: 20px 0 20px 0; /* Отступы сверху и снизу */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out; /* Добавлен плавный переход */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.home {
+    padding: 120px 20px 20px 20px; /* Соответствует высоте хедера */
+    background: url('pic/Banner2.jpg') no-repeat center center/cover;
+}
+
+.home h2 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home p {
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-banner img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shop {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.shop h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.product p {
+    font-size: 18px;
+    color: #666;
+}
+
+.product button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.product button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.about, .contact, .contact-form {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2, .contact h2, .contact-form h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about p, .contact p {
+    font-size: 18px;
+    color: #666;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: url('pic/Banner3.jpg') no-repeat center center/cover;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-form input, .contact-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: static; /* Статическое позиционирование */
+    bottom: 0;
+}
+
+.footer .social-media {
+    margin-top: 10px;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .support {
+    margin-top: 20px;
+}
+
+.footer .support a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Эффекты при наведении */
+.product img:hover, .product button:hover, .product h3:hover, .product p:hover {
+    transform: scale(1.1);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.about, .contact, .contact-form {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.home {
+    animation: moveBackground 10s linear infinite;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 28px; /* Увеличиваем размер кнопки */
+        margin-left: 10px; /* Расположение слева */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 5px;
+        display: none;
+        width: 100%;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .home {
+        padding: 120px 20px;
+    }
+
+    .shop h2, .about h2, .contact h2 {
+        font-size: 24px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        height: auto;
+    }
+
+    .product h3, .product p, .product button {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .home h2, .home p {
+        font-size: 18px;
+    }
+
+    .home {
+        padding: 80px 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about, .contact, .contact-form {
+        padding: 30px 20px;
+    }
+}
